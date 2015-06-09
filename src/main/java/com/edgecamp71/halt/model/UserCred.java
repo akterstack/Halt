@@ -2,10 +2,15 @@ package com.edgecamp71.halt.model;
 
 import com.edgecamp71.halt.io.Model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 
 @Entity
-@Table
+@Table(name="UserCred")
 public class UserCred extends Model<UserCred> {
 
     private Long id;
@@ -39,5 +44,9 @@ public class UserCred extends Model<UserCred> {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String toString() {
+        return id + username + password;
     }
 }

@@ -1,5 +1,6 @@
 package com.edgecamp71.halt.io;
 
+import com.edgecamp71.halt.model.UserCred;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -12,7 +13,9 @@ public class HibernateUtil {
 
     private static void buildSessionFactory() {
         try {
-            Configuration cfg = new Configuration().configure();
+            Configuration cfg = new Configuration()
+                .configure("datasource.xml")
+                .addAnnotatedClass(UserCred.class);
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                 .applySettings(cfg.getProperties())
                 .build();
@@ -24,13 +27,15 @@ public class HibernateUtil {
 
     public static SessionFactory sessionFactory() {
         if(sessionFactory == null) {
+            System.out.println(546546);
             buildSessionFactory();
         }
+        System.out.println(sessionFactory);
         return sessionFactory;
     }
 
-    public static Session currentSession() {
-        return sessionFactory().getCurrentSession();
+    public static Session session() {
+        return sessionFactory().openSession();
     }
 
 }
