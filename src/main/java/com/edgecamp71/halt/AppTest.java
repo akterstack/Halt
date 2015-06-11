@@ -13,5 +13,4 @@ public class AppTest {
         UserCred uc = (UserCred)UserCred.findById(UserCred.class, 1l);
         System.out.println(uc.getPassword());
     }
-
 }
