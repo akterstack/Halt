@@ -6,7 +6,6 @@ repositories {
 }
 
 dependencies {
-    compile 'org.hibernate:hibernate-core:4.3.10.Final'
     compile 'org.slf4j:slf4j-api:1.7.12'
 
     runtime 'com.h2database:h2:1.4.187'

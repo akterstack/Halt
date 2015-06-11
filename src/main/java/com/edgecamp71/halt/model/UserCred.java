@@ -1,25 +1,13 @@
 package com.edgecamp71.halt.model;
 
-import com.edgecamp71.halt.io.Model;
+import io.dbean.core.DBean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-
-@Entity
-@Table(name="UserCred")
-public class UserCred extends Model<UserCred> {
+public class UserCred extends DBean {
 
     private Long id;
     private String username;
     private String password;
 
-    @Id
-    @GeneratedValue
-    @Column
     public Long getId() {
         return id;
     }
@@ -28,7 +16,6 @@ public class UserCred extends Model<UserCred> {
         this.id = id;
     }
 
-    @Column
     public String getUsername() {
         return username;
     }
@@ -37,7 +24,6 @@ public class UserCred extends Model<UserCred> {
         this.username = username;
     }
 
-    @Column
     public String getPassword() {
         return password;
     }
@@ -49,4 +35,5 @@ public class UserCred extends Model<UserCred> {
     public String toString() {
         return id + username + password;
     }
+
 }
