@@ -23,7 +23,7 @@ public abstract class Model implements Serializable {
         return (Model) HibernateUtil.session().get(modelClazz, id);
     }
 
-    private void withTxn(Consumer<Session> consumer) {
+    public void withTxn(Consumer<Session> consumer) {
         Session session = HibernateUtil.session();
         session.beginTransaction();
         consumer.accept(session);
