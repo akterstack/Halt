@@ -17,8 +17,8 @@ public class UserCred extends Model {
     private String password;
 
     @Id
-    @GeneratedValue
     @Column
+    @GeneratedValue
     public Long getId() {
         return id;
     }
