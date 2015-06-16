@@ -10,8 +10,8 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="UserCred")
-public class UserCred extends Model<UserCred> {
+@Table
+public class UserCred extends Model {
 
     private Long id;
     private String username;

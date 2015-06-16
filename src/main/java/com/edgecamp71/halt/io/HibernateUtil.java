@@ -25,17 +25,17 @@ public class HibernateUtil {
         }
     }
 
-    public static SessionFactory sessionFactory() {
+    private static SessionFactory sessionFactory() {
         if(sessionFactory == null) {
-            System.out.println(546546);
             buildSessionFactory();
         }
-        System.out.println(sessionFactory);
         return sessionFactory;
     }
 
     public static Session session() {
         return sessionFactory().openSession();
     }
+
+
 
 }
