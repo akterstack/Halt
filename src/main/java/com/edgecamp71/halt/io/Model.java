@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 
 public abstract class Model implements Serializable {
 
-    @SuppressWarnings("unchecked")
     public void save() {
         withTxn((session)->session.save(this));
     }
@@ -20,12 +19,10 @@ public abstract class Model implements Serializable {
         withTxn((session)->session.delete(this));
     }
 
-    @SuppressWarnings("unchecked")
     public static Model findById(Class modelClazz, Long id) {
         return (Model) HibernateUtil.session().get(modelClazz, id);
     }
 
-    @SuppressWarnings("unchecked")
     private void withTxn(Consumer<Session> consumer) {
         Session session = HibernateUtil.session();
         session.beginTransaction();
