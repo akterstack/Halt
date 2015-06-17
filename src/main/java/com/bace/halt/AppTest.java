@@ -1,6 +1,6 @@
-package com.edgecamp71.halt;
+package com.bace.halt;
 
-import com.edgecamp71.halt.model.UserCred;
+import com.bace.halt.model.UserCred;
 
 public class AppTest {
 

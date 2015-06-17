@@ -1,6 +1,6 @@
-package com.edgecamp71.halt.model;
+package com.bace.halt.model;
 
-import com.edgecamp71.halt.io.Model;
+import com.bace.halt.io.Model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

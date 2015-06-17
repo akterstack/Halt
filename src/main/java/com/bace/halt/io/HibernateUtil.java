@@ -1,6 +1,6 @@
-package com.edgecamp71.halt.io;
+package com.bace.halt.io;
 
-import com.edgecamp71.halt.model.UserCred;
+import com.bace.halt.model.UserCred;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

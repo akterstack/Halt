@@ -11,6 +11,6 @@
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
-        <mapping class="com.edgecamp71.halt.model.UserCred"/>
+        <mapping class="com.bace.halt.model.UserCred"/>
     </session-factory>
 </hibernate-configuration>

@@ -1,4 +1,4 @@
-package com.edgecamp71.halt.io;
+package com.bace.halt.io;
 
 public class QueryBuilder {
 
